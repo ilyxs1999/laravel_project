@@ -1,0 +1,11 @@
+.header_img{
+    width: 100%;
+    height: 200px;
+}
+.header_img #header_img{
+    width: 100%;
+    min-height: 100%;
+}
+.layout{
+    background-color: #faf8f2;
+}
