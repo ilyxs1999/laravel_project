@@ -24,6 +24,7 @@ Route::get('/test',[HomeController::class, 'test'])->name('test');
 Route::get('/article/{id}',[MainController::class,'showArticle'])->name('showArticle');
 Route::post('/article/addComment/{id}',[HomeController::class, 'addComment'])->name('addComment');
 Route::get('/userProfile/{id}',[MainController::class, 'showUserProfile'])->name('userProfile');
+Route::post('/userProfile/sendMessage',[HomeController::class,'sendMessage'])->name('sendMessage');
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');

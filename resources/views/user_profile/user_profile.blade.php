@@ -12,7 +12,7 @@
                 <p class="fs-1 pb-3 m-0">{{$user->name}}</p>
                 @if (Auth::check())
                     <div class="h-100 d-flex align-items-center pb-3 mx-3">
-                        <img style="width: 20px; height: 20px" src="{{asset('storage/message.png')}}" alt="Написать сообщение.">
+                        <img style="width: 20px; height: 20px" id="send_message"  src="{{asset('storage/message.png')}}" alt="Написать сообщение.">
                     </div>
                 @endif
             </div>
@@ -24,7 +24,10 @@
                     </tr>
                 </table>
             </div>
-
         </div>
     </div>
+    @include('user_profile.message_model',['user'=>$user])
 @endsection
+@push('scripts')
+    <script src="{{asset('js/user_profile.js')}}"></script>
+@endpush

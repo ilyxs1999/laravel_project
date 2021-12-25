@@ -7,7 +7,6 @@ $('.add_comment button').click(function (){
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         data: { text: text }
     }).done(function( comment ) {
-        console.log(comment);
         if(comment) {
             $(".comments").prepend(comment);
         }

@@ -57,6 +57,10 @@ class HomeController extends Controller
 
     }
 
+    public function sendMessage(Request $request){
+        $data = $request->all();
+        return $data;
+    }
 
     public function writeArticle(){
         $categories = Category::all();
