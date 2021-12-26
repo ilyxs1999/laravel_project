@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Chat;
 use App\Models\Category;
 use App\Models\Comment;
 use Illuminate\Http\Request;
@@ -55,11 +56,6 @@ class HomeController extends Controller
 
        return $temp;
 
-    }
-
-    public function sendMessage(Request $request){
-        $data = $request->all();
-        return $data;
     }
 
     public function writeArticle(){

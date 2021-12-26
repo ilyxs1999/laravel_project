@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <p class="fs-1 pb-3 m-0">{{$user->name}}</p>
-                @if (Auth::check())
+                @if (Auth::check() && $user->id!=Auth::id())
                     <div class="h-100 d-flex align-items-center pb-3 mx-3">
                         <img style="width: 20px; height: 20px" id="send_message"  src="{{asset('storage/message.png')}}" alt="Написать сообщение.">
                     </div>

@@ -20,19 +20,22 @@
         <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
     </form>
 </nav>
-<div class="row container-fluid ">
-    <div class="list-group profile_menu col-sm-12 col-md-3 mt-sm-2">
-        <a type="button" href="{{route('home')}}" class="list-group-item list-group-item-action" aria-current="true">
-            Профиль
-        </a>
-        <a type="button" href="{{route('writeArticle')}}" class="list-group-item list-group-item-action">Написать статью</a>
-        <a type="button" class="list-group-item list-group-item-action" >Сообщения</a>
-        <a type="button" class="list-group-item list-group-item-action">Просмотреть статьи</a>
-        <a type="button" href="{{route('test')}}" class="list-group-item list-group-item-action" >Test</a>
-    </div>
-
-    <div class="container-fluid col-sm-12 col-md-9 mt-sm-2">
-        @yield('main_content')
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-3">
+            <div class="list-group profile_menu mt-3">
+                <a type="button" href="{{route('home')}}" class="list-group-item list-group-item-action" aria-current="true">
+                    Профиль
+                </a>
+                <a type="button" href="{{route('writeArticle')}}" class="list-group-item list-group-item-action">Написать статью</a>
+                <a type="button" href="{{route('chats')}}" class="list-group-item list-group-item-action" >Сообщения</a>
+                <a type="button" class="list-group-item list-group-item-action">Просмотреть статьи</a>
+                <a type="button" href="{{route('test')}}" class="list-group-item list-group-item-action" >Test</a>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-9">
+            @yield('main_content')
+        </div>
     </div>
 </div>
 

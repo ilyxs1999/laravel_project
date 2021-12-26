@@ -45,4 +45,8 @@ class User extends Authenticatable
     public function comments(){
         return $this->hasMany(Comment::class)->orderBy('created_at','desc');
     }
+
+    public function chats(){
+        return $this->belongsToMany(Chat::class,'chat_lists');
+    }
 }

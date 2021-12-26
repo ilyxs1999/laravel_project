@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\ChatController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -24,7 +25,9 @@ Route::get('/test',[HomeController::class, 'test'])->name('test');
 Route::get('/article/{id}',[MainController::class,'showArticle'])->name('showArticle');
 Route::post('/article/addComment/{id}',[HomeController::class, 'addComment'])->name('addComment');
 Route::get('/userProfile/{id}',[MainController::class, 'showUserProfile'])->name('userProfile');
-Route::post('/userProfile/sendMessage',[HomeController::class,'sendMessage'])->name('sendMessage');
+
+Route::post('/userProfile/sendMessage',[ChatController::class,'sendMessage'])->name('sendMessage');
+Route::get('chats',[ChatController::class,'chats'])->name('chats');
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
